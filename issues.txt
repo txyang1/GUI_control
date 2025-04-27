@@ -1,4 +1,3 @@
-(tran) PS C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace> python check_position.py
 Traceback (most recent call last):
   File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\application.py", line 258, in __resolve_control
     criteria)
@@ -9,10 +8,10 @@ pywinauto.timings.TimeoutError
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "check_position.py", line 15, in <module>
-    dlg.print_control_identifiers()
-  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\application.py", line 613, in print_control_identifiers
-    this_ctrl = self.__resolve_control(self.criteria)[-1]
+  File "c:/Users/qxz5y3m/Desktop/Transfer_Tool_for_trace/tx_control2.3.py", line 9, in <module>
+    tab = dlg.child_window(auto_id="tabControl1", control_type="Tab").wrapper_object()
+  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\application.py", line 267, in wrapper_object
+    ctrls = self.__resolve_control(self.criteria)
   File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\application.py", line 261, in __resolve_control
     raise e.original_exception
   File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\timings.py", line 436, in wait_until_passes
@@ -21,4 +20,4 @@ Traceback (most recent call last):
     dialog = self.backend.generic_wrapper_class(findwindows.find_element(**criteria[0]))
   File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\findwindows.py", line 87, in find_element
     raise ElementNotFoundError(kwargs)
-pywinauto.findwindows.ElementNotFoundError: {'title_re': '.*ViGEM CCA-Converter (3.1.4.0).*', 'backend': 'uia', 'process': 15584}
+pywinauto.findwindows.ElementNotFoundError: {'title_re': '.*ViGEM CCA-Converter.*', 'backend': 'uia', 'process': 20112}
