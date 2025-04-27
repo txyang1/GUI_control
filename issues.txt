@@ -1,23 +1,8 @@
-Traceback (most recent call last):                                                                                         
-  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\application.py", line 258, in __resolve_control
-    criteria)
-  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\timings.py", line 458, in wait_until_passes
-    raise err
-pywinauto.timings.TimeoutError
-
-During handling of the above exception, another exception occurred:
-
+共找到 4 条 Session： ['Top Row', 'Row 0', 'Row 1', 'Row 2']
+[1/4] 选中并运行 PCAP → Top Row
 Traceback (most recent call last):
-  File "check2.py", line 8, in <module>
-    dlg.print_control_identifiers()
-  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\application.py", line 613, in print_control_identifiers
-    this_ctrl = self.__resolve_control(self.criteria)[-1]
-  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\application.py", line 261, in __resolve_control
-    raise e.original_exception
-  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\timings.py", line 436, in wait_until_passes
-    func_val = func(*args, **kwargs)
-  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\application.py", line 203, in __get_ctrl
-    dialog = self.backend.generic_wrapper_class(findwindows.find_element(**criteria[0]))
-  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\findwindows.py", line 87, in find_element
-    raise ElementNotFoundError(kwargs)
-pywinauto.findwindows.ElementNotFoundError: {'title_re': '.*ViGEM CCA-Converter.*', 'backend': 'uia', 'process': 17316} 
+  File "c:/Users/qxz5y3m/Desktop/Transfer_Tool_for_trace/tx_CCA.py", line 61, in <module>
+    main()
+  File "c:/Users/qxz5y3m/Desktop/Transfer_Tool_for_trace/tx_CCA.py", line 53, in main
+    pcap_start_btn.wait_not("enabled", timeout=5)
+AttributeError: 'ButtonWrapper' object has no attribute 'wait_not'
