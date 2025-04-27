@@ -1,13 +1,8 @@
-from pywinauto import Desktop, Application
-import time
+from pywinauto import Application
 
-# 先启动或连接 APP
-app = Application(backend="uia").connect(path="ViGEMCCA-Converter.exe")
-pid = app.process
+app = Application(backend="uia").connect(path="YourApp.exe")
+dlg = app.window(title_re=".*Your App Window Title.*")
 
-# 等个几秒，保证窗口已经弹出来
-time.sleep(2)
+# 打印出这个窗口下所有子控件的层级和属性
+dlg.print_control_identifiers()
 
-# 枚举这个进程的所有顶层窗口，打印它们的标题
-for w in Desktop(backend="uia").windows(process=pid):
-    print(repr(w.window_text()))
