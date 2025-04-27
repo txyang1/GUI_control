@@ -1,0 +1,34 @@
+Dialog - 'ViGEM CCA-Converter (3.1.4.0)'    (L-12, T-12, R1932, B1140)
+['ViGEM CCA-Converter (3.1.4.0)Dialog', 'Dialog', 'ViGEM CCA-Converter (3.1.4.0)']
+child_window(title="ViGEM CCA-Converter (3.1.4.0)", auto_id="ConverterGui", control_type="Window")        
+   | 
+   | Pane - 'toolStripContainer1'    (L0, T35, R1920, B1129)
+   | ['toolStripContainer1Pane', 'toolStripContainer1', 'Pane', 'Pane0', 'Pane1']
+   | child_window(title="toolStripContainer1", auto_id="toolStripContainer1", control_type="Pane")        
+   |    | 
+   |    | Pane - ''    (L0, T108, R1920, B1128)
+   |    | ['Input LocationPane', 'Pane2', 'Input LocationPane0', 'Input LocationPane1']
+   |    | child_window(auto_id="2295868", control_type="Pane")
+   |    | 
+   |    | Pane - ''    (L0, T35, R1920, B109)
+   |    | ['Pane30']
+   |    | child_window(auto_id="3017098", control_type="Pane")
+   | 
+   | TitleBar - ''    (L24, T-8, R1920, B35)
+   | ['TitleBar']
+   |    |
+   |    | Menu - 'System'    (L0, T0, R33, B33)
+   |    | ['Menu2', 'System', 'SystemMenu', 'System0', 'System1']
+   |    | child_window(title="System", auto_id="MenuBar", control_type="MenuBar")
+   |    |
+   |    | Button - 'Minimize'    (L1707, T0, R1778, B35)
+   |    | ['Button38', 'MinimizeButton', 'Minimize']
+   |    | child_window(title="Minimize", control_type="Button")
+   |    |
+   |    | Button - 'Restore'    (L1778, T0, R1849, B35)
+   |    | ['Button39', 'RestoreButton', 'Restore']
+   |    | child_window(title="Restore", control_type="Button")
+   |    |
+   |    | Button - 'Close'    (L1848, T0, R1920, B35)
+   |    | ['Button40', 'Close', 'CloseButton']
+   |    | child_window(title="Close", control_type="Button")
