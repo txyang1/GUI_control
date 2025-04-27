@@ -10,8 +10,10 @@ def main():
     dlg.wait("visible enabled ready", timeout=30)
     dlg.set_focus()
 
-    # 2. 定位左侧 Sessions Tab 和右侧 PCAP Pane
+    # 2. 定位 Sessions Tab
     tab = dlg.child_window(auto_id="tabControl1", control_type="Tab")
+
+    # 3. 定位右侧 PCAP Pane
     pcap_pane      = dlg.child_window(auto_id="PCAP", control_type="Pane")
     pcap_checkbox  = pcap_pane.child_window(
         auto_id="activateCheckBox", control_type="CheckBox"
@@ -20,60 +22,53 @@ def main():
         auto_id="startButton", control_type="Button"
     )
 
-    # 2.1 确保 PCAP 复选框已勾
+    # 确保 PCAP 全局复选框已勾上
     if pcap_checkbox.get_toggle_state() == 0:
         pcap_checkbox.click_input()
         time.sleep(0.2)
 
-    # 3. 切到 Sessions，拿到表格
+    # 4. 切到 Sessions，拿到表格
     tab.child_window(title="Sessions", control_type="TabItem").select()
     time.sleep(0.5)
     sessions_table = dlg.child_window(
         auto_id="SessionView", control_type="Table"
     ).wrapper_object()
 
-    # 4. 找到每行最左侧的复选框（跳过第一个“全选”）
-    all_boxes   = sessions_table.descendants(control_type="CheckBox")
-    row_boxes   = [box.wrapper_object() for box in all_boxes[1:]]  # 1: 跳过全选
-    # 只保留和 DataItem 行数一样的那几项
-    # 先找到行名用来打印
-    all_dataitems   = sessions_table.descendants(control_type="DataItem")
-    name_pattern    = re.compile(r"^\s*Row \d+$")
-    row_items       = [it for it in all_dataitems if it.element_info.name and name_pattern.match(it.element_info.name)]
-    # 保证复选框和行数对齐
-    row_boxes = row_boxes[:len(row_items)]
+    # 5. 找到所有行复选框 (第一个是全选，去掉它)
+    all_boxes = sessions_table.descendants(control_type="CheckBox")
+    row_boxes = [cb.wrapper_object() for cb in all_boxes[1:]]  # 每行对应一个 CheckBox
 
-    print(f"共找到 {len(row_items)} 条 Session：",
-          [it.element_info.name.strip() for it in row_items])
+    # 6. （可选）打印一下行数
+    print(f"共找到 {len(row_boxes)} 条 Session 行，将依次运行它们的 PCAP。")
 
-    # 5. 逐行选中、跑 PCAP、取消选中
-    for idx, (item, box) in enumerate(zip(row_items, row_boxes), start=1):
-        name = item.element_info.name.strip()
-        print(f"[{idx}/{len(row_items)}] 处理 → {name}")
+    # 7. 依次处理
+    for idx, box in enumerate(row_boxes, start=1):
+        print(f"[{idx}/{len(row_boxes)}] 运行第 {idx} 行的 PCAP …")
 
-        # 5.1 点击复选框选中
+        # 7.1 先取消所有行的勾选
+        for b in row_boxes:
+            if b.get_toggle_state() == 1:
+                b.click_input()
+                time.sleep(0.1)
+
+        # 7.2 勾选当前行
         box.click_input()
-        time.sleep(0.2)
+        time.sleep(0.1)
 
-        # 5.2 点击 ▶ 启动 PCAP
+        # 7.3 点击 ▶ 启动 PCAP
         pcap_start_btn.click_input()
 
-        # 5.3 等待按钮禁用（如果会禁用）
+        # 7.4 等待按钮禁用（如果会禁用）
         try:
             pcap_start_btn.wait_not("enabled", timeout=5)
-            print("    → 作业已启动（按钮禁用）")
         except timings.TimeoutError:
-            print("    → 按钮未禁用，作业可能在后台启动")
+            pass  # 有些版本可能不禁用，直接继续
 
-        # 5.4 等待按钮重新可用（作业完成）
+        # 7.5 等待按钮重新可用（表示作业完成）
         pcap_start_btn.wait("enabled", timeout=600)
-        print(f"  ✓ {name} 完成")
+        print(f"  ✓ 第 {idx} 行完成")
 
-        # 5.5 点击复选框取消该行选中
-        box.click_input()
-        time.sleep(0.2)
-
-    print("🎉 所有 Session 都已跑完并取消选中！")
+    print("🎉 已全部运行完毕！")
 
 if __name__ == "__main__":
     main()
