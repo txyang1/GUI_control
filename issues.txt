@@ -1,28 +1,8 @@
 Traceback (most recent call last):
-  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\application.py", line 258, in __resolve_control
-    criteria)
-  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\timings.py", line 458, in wait_until_passes
-    raise err
-pywinauto.timings.TimeoutError
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "c:/Users/qxz5y3m/Desktop/Transfer_Tool_for_trace/auto_gui1.1.py", line 53, in <module>
+  File "c:/Users/qxz5y3m/Desktop/Transfer_Tool_for_trace/auto_gui1.1.py", line 102, in <module>
     automate_converter(converter_exe, input_folder, output_folder)
-  File "c:/Users/qxz5y3m/Desktop/Transfer_Tool_for_trace/auto_gui1.1.py", line 21, in automate_converter  
-    dlg.child_window(title="Open", control_type="Button", found_index=4).click_input()
-  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\application.py", line 379, in __getattribute__
-    ctrls = self.__resolve_control(self.criteria)
-  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\application.py", line 261, in __resolve_control
-    raise e.original_exception
-  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\timings.py", line 436, in wait_until_passes
-    func_val = func(*args, **kwargs)
-  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\application.py", line 222, in __get_ctrl
-    ctrl = self.backend.generic_wrapper_class(findwindows.find_element(**ctrl_criteria))
-  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\findwindows.py", line 84, in find_element
-    elements = find_elements(**kwargs)
-  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\findwindows.py", line 329, in find_elements
-    found_index, len(elements)))
-pywinauto.findwindows.ElementNotFoundError: found_index is specified as 4, but 4 window/s found
-PS C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace> 
+  File "c:/Users/qxz5y3m/Desktop/Transfer_Tool_for_trace/auto_gui1.1.py", line 72, in automate_converter  
+    dlg.child_window(title="Sessions", control_type="TabItem").select()
+  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\controls\uiawrapper.py", line 605, in select
+    self.iface_selection_item.Select()
+_ctypes.COMError: (-2147220992, None, (None, None, None, 0, None))
