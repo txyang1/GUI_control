@@ -1,23 +1,8 @@
 Traceback (most recent call last):
-  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\application.py", line 258, in __resolve_control
-    criteria)
-  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\timings.py", line 458, in wait_until_passes
+  File "c:/Users/qxz5y3m/Desktop/Transfer_Tool_for_trace/tx_control2.3.py", line 16, in <module>
+    tab_parent.wait("exists ready visible", timeout=10)
+  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\application.py", line 530, in wait
+    lambda: self.__check_all_conditions(check_method_names, retry_interval))
+  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\timings.py", line 375, in wait_until
     raise err
-pywinauto.timings.TimeoutError
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "c:/Users/qxz5y3m/Desktop/Transfer_Tool_for_trace/tx_control2.3.py", line 9, in <module>
-    tab = dlg.child_window(auto_id="tabControl1", control_type="Tab").wrapper_object()
-  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\application.py", line 267, in wrapper_object
-    ctrls = self.__resolve_control(self.criteria)
-  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\application.py", line 261, in __resolve_control
-    raise e.original_exception
-  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\timings.py", line 436, in wait_until_passes
-    func_val = func(*args, **kwargs)
-  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\application.py", line 203, in __get_ctrl
-    dialog = self.backend.generic_wrapper_class(findwindows.find_element(**criteria[0]))
-  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\findwindows.py", line 87, in find_element
-    raise ElementNotFoundError(kwargs)
-pywinauto.findwindows.ElementNotFoundError: {'title_re': '.*ViGEM CCA-Converter.*', 'backend': 'uia', 'process': 20112}
+pywinauto.timings.TimeoutError: timed out
