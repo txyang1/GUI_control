@@ -1,8 +1,10 @@
-共找到 4 条 Session： ['Top Row', 'Row 0', 'Row 1', 'Row 2']
-[1/4] 选中并运行 PCAP → Top Row
 Traceback (most recent call last):
-  File "c:/Users/qxz5y3m/Desktop/Transfer_Tool_for_trace/tx_CCA.py", line 61, in <module>
+  File "c:/Users/qxz5y3m/Desktop/Transfer_Tool_for_trace/tx_cca5.py", line 64, in <module>
     main()
-  File "c:/Users/qxz5y3m/Desktop/Transfer_Tool_for_trace/tx_CCA.py", line 53, in main
-    pcap_start_btn.wait_not("enabled", timeout=5)
-AttributeError: 'ButtonWrapper' object has no attribute 'wait_not'
+  File "c:/Users/qxz5y3m/Desktop/Transfer_Tool_for_trace/tx_cca5.py", line 38, in main
+    title_re="Folder Name Row \\d+"
+  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\base_wrapper.py", line 492, in descendants
+    desc_elements = self.element_info.descendants(**kwargs)
+  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\uia_element_info.py", line 306, in descendants
+    cond = IUIA().build_condition(**kwargs)
+TypeError: build_condition() got an unexpected keyword argument 'title_re'
