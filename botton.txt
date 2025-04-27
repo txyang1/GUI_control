@@ -1,0 +1,661 @@
+(tran) PS C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace> python check_position.py
+Control Identifiers:
+
+Dialog - 'ViGEM CCA-Converter (3.1.4.0)'    (L-12, T-12, R1932, B1140)
+['ViGEM CCA-Converter (3.1.4.0)Dialog', 'ViGEM CCA-Converter (3.1.4.0)', 'Dialog']
+child_window(title="ViGEM CCA-Converter (3.1.4.0)", auto_id="ConverterGui", control_type="Window")        
+   |
+   | Pane - 'toolStripContainer1'    (L0, T35, R1920, B1129)
+   | ['Pane', 'toolStripContainer1', 'toolStripContainer1Pane', 'Pane0', 'Pane1']
+   | child_window(title="toolStripContainer1", auto_id="toolStripContainer1", control_type="Pane")        
+   |    | 
+   |    | Pane - ''    (L0, T108, R1920, B1128)
+   |    | ['Pane2', 'Input LocationPane', 'Input LocationPane0', 'Input LocationPane1']
+   |    | child_window(auto_id="7079666", control_type="Pane")
+   |    |    | 
+   |    |    | Pane - ''    (L0, T108, R1920, B1128)
+   |    |    | ['Pane3', 'Input LocationPane2']
+   |    |    | child_window(auto_id="splitContainer1", control_type="Pane")
+   |    |    |    | 
+   |    |    |    | Pane - ''    (L0, T108, R1920, B839)
+   |    |    |    | ['Pane4', 'Input LocationPane3']
+   |    |    |    | child_window(auto_id="1312906", control_type="Pane")
+   |    |    |    |    | 
+   |    |    |    |    | Pane - ''    (L0, T108, R1920, B839)
+   |    |    |    |    | ['Pane5', 'Input LocationPane4']
+   |    |    |    |    | child_window(auto_id="splitContainer2", control_type="Pane")
+   |    |    |    |    |    |
+   |    |    |    |    |    | Pane - ''    (L0, T108, R761, B839)
+   |    |    |    |    |    | ['Pane6', 'Input LocationPane5']
+   |    |    |    |    |    | child_window(auto_id="1048826", control_type="Pane")
+   |    |    |    |    |    |    | 
+   |    |    |    |    |    |    | Pane - ''    (L2, T110, R760, B838)
+   |    |    |    |    |    |    | ['Pane7', 'Input LocationPane6']
+   |    |    |    |    |    |    | child_window(auto_id="panel3", control_type="Pane")
+   |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    | Static - 'Input Location'    (L5, T120, R118, B140)
+   |    |    |    |    |    |    |    | ['Input Location', 'Static', 'Input LocationStatic', 'Input Location0', 'Input Location1', 'Static0', 'Static1']
+   |    |    |    |    |    |    |    | child_window(title="Input Location", auto_id="label1", control_type="Text")
+   |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    | ComboBox - 'Input Location'    (L123, T114, R758, B146)
+   |    |    |    |    |    |    |    | ['Input Location2', 'ComboBox', 'Input LocationComboBox', 'ComboBox0', 'ComboBox1']
+   |    |    |    |    |    |    |    | child_window(title="Input Location", auto_id="inputLocationComboBox", control_type="ComboBox")
+   |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    | Edit - 'Input Location'    (L128, T119, R728, B142)
+   |    |    |    |    |    |    |    |    | ['Input LocationEdit', 'Edit', 'Edit0', 'Edit1']
+   |    |    |    |    |    |    |    |    | child_window(title="Input Location", auto_id="1001", control_type="Edit")
+   |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    | Button - 'Open'    (L734, T116, R757, B145)
+   |    |    |    |    |    |    |    |    | ['Open', 'OpenButton', 'Button', 'Button0', 'Button1', 'Open0', 'Open1', 'OpenButton0', 'OpenButton1']
+   |    |    |    |    |    |    |    |    | child_window(title="Open", control_type="Button")
+   |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    | Pane - ''    (L2, T110, R760, B838)
+   |    |    |    |    |    |    |    | ['Pane8', 'Input LocationPane7']
+   |    |    |    |    |    |    |    | child_window(auto_id="loggerTable1", control_type="Pane")
+   |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    | Pane - ''    (L6, T155, R755, B833)
+   |    |    |    |    |    |    |    |    | ['Pane9', 'Input LocationPane8']
+   |    |    |    |    |    |    |    |    | child_window(auto_id="panel1", control_type="Pane")
+   |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    | Pane - ''    (L6, T155, R755, B833)
+   |    |    |    |    |    |    |    |    |    | ['Pane10', 'Input LocationPane9']
+   |    |    |    |    |    |    |    |    |    | child_window(auto_id="splitContainer1", control_type="Pane")
+   |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    | Pane - ''    (L6, T155, R755, B683)
+   |    |    |    |    |    |    |    |    |    |    | ['Pane11', 'Input LocationPane10']
+   |    |    |    |    |    |    |    |    |    |    | child_window(auto_id="1575180", control_type="Pane")
+   |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    | TabControl - ''    (L8, T156, R754, B681)     
+   |    |    |    |    |    |    |    |    |    |    |    | ['TabControlFiles', 'TabControl', 'TabControlSessions', 'TabControlTimeline', 'Input LocationTabControl']
+   |    |    |    |    |    |    |    |    |    |    |    | child_window(auto_id="tabControl1", control_type="Tab")
+   |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    | Pane - 'Timeline'    (L14, T189, R748, B675)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['Pane12', 'Timeline', 'TimelinePane', 'Timeline0', 'Timeline1']
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Timeline", auto_id="timeLinePage", control_type="Pane")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | Table - 'DataGridView'    (L18, T194, R743, B671)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | ['Table', 'DataGridView', 'DataGridViewTable']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="DataGridView", auto_id="timeLineView", control_type="Table")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | Custom - 'Top Row'    (L18, T194, R743, B221)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['Top Row', 'Top RowCustom', 'Custom', 'Custom0', 'Custom1']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Top Row", control_type="Custom")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | Header - ''    (L18, T194, R48, B221)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['Header', 'Input LocationHeader', 'Header0', 'Header1', 'Input LocationHeader0', 'Input LocationHeader1']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | Header - 'Timestamp'    (L48, T194, R224, B221)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['Header2', 'Timestamp', 'TimestampHeader']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Timestamp", control_type="Header")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | Header - 'Event Name'    (L224, T194, R335, B221)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['Header3', 'Event Name', 'Event NameHeader']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Event Name", control_type="Header")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | Header - 'BN_IUKETH'    (L335, T194, R485, B221)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['Header4', 'BN_IUKETHHeader', 'BN_IUKETH']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="BN_IUKETH", control_type="Header")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | Header - ''    (L485, T194, R635, B221)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['Header5', 'Input LocationHeader2']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | Custom - 'Row 0'    (L18, T221, R743, B254)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['Row 0Custom', 'Row 0', 'Custom2']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Row 0", control_type="Custom")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | DataItem - ' Row 0'    (L18, T221, R48, B254)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['DataItem', ' Row 0', ' Row 0DataItem', 'DataItem0', 'DataItem1', ' Row 00', ' Row 01', ' Row 0DataItem0', ' Row 0DataItem1']      
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title=" Row 0", control_type="DataItem")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | DataItem - 'Timestamp Row 0'    (L48, T221, R224, B254)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['DataItem2', 'Timestamp Row 0DataItem', 'Timestamp Row 0']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Timestamp Row 0", control_type="DataItem")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | DataItem - 'Event Name Row 0'    (L224, T221, R335, B254)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['DataItem3', 'Event Name Row 0', 'Event Name Row 0DataItem']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Event Name Row 0", control_type="DataItem")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | DataItem - 'BN_IUKETH Row 0'    (L335, T221, R485, B254)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['DataItem4', 'BN_IUKETH Row 0', 'BN_IUKETH Row 0DataItem']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="BN_IUKETH Row 0", control_type="DataItem")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | DataItem - ' Row 0'    (L485, T221, R635, B254)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['DataItem5', ' Row 02', ' Row 0DataItem2']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title=" Row 0", control_type="DataItem")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | Custom - 'Row 1'    (L18, T254, R743, B287)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['Row 1', 'Custom3', 'Row 1Custom']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Row 1", control_type="Custom")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | DataItem - ' Row 1'    (L18, T254, R48, B287)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['DataItem6', ' Row 1DataItem', ' Row 1', ' Row 1DataItem0', ' Row 1DataItem1', ' Row 10', ' Row 11']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title=" Row 1", control_type="DataItem")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | DataItem - 'Timestamp Row 1'    (L48, T254, R224, B287)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['DataItem7', 'Timestamp Row 1DataItem', 'Timestamp Row 1']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Timestamp Row 1", control_type="DataItem")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | DataItem - 'Event Name Row 1'    (L224, T254, R335, B287)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['DataItem8', 'Event Name Row 1DataItem', 'Event Name Row 1']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Event Name Row 1", control_type="DataItem")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | DataItem - 'BN_IUKETH Row 1'    (L335, T254, R485, B287)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['DataItem9', 'BN_IUKETH Row 1DataItem', 'BN_IUKETH Row 1']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="BN_IUKETH Row 1", control_type="DataItem")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | DataItem - ' Row 1'    (L485, T254, R635, B287)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['DataItem10', ' Row 1DataItem2', ' Row 12']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title=" Row 1", control_type="DataItem")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | Custom - 'Row 2'    (L18, T287, R743, B320)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['Row 2Custom', 'Row 2', 'Custom4']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Row 2", control_type="Custom")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | DataItem - ' Row 2'    (L18, T287, R48, B320)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['DataItem11', ' Row 2', ' Row 2DataItem', ' Row 20', ' Row 21', ' Row 2DataItem0', ' Row 2DataItem1']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title=" Row 2", control_type="DataItem")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | DataItem - 'Timestamp Row 2'    (L48, T287, R224, B320)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['DataItem12', 'Timestamp Row 2DataItem', 'Timestamp Row 2']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Timestamp Row 2", control_type="DataItem")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | DataItem - 'Event Name Row 2'    (L224, T287, R335, B320)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['DataItem13', 'Event Name Row 2DataItem', 'Event Name Row 2']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Event Name Row 2", control_type="DataItem")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | DataItem - 'BN_IUKETH Row 2'    (L335, T287, R485, B320)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['DataItem14', 'BN_IUKETH Row 2', 'BN_IUKETH Row 2DataItem']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="BN_IUKETH Row 2", control_type="DataItem")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | DataItem - ' Row 2'    (L485, T287, R635, B320)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['DataItem15', ' Row 22', ' Row 2DataItem2']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title=" Row 2", control_type="DataItem")
+   |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    | TabItem - 'Timeline'    (L11, T159, R88, B186)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['TabItem', 'Timeline2', 'TimelineTabItem', 'TabItem0', 'TabItem1']
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Timeline", control_type="TabItem")
+   |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    | TabItem - 'Sessions'    (L87, T159, R168, B186)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['TabItem2', 'Sessions', 'SessionsTabItem']
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Sessions", control_type="TabItem")
+   |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    | TabItem - 'Files'    (L168, T159, R231, B186)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['TabItem3', 'FilesTabItem', 'Files']    
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Files", control_type="TabItem")
+   |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    | Pane - ''    (L6, T689, R755, B833)
+   |    |    |    |    |    |    |    |    |    |    | ['Pane13', 'TimePane', 'TimePane0', 'TimePane1']   
+   |    |    |    |    |    |    |    |    |    |    | child_window(auto_id="1771800", control_type="Pane")
+   |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    | Pane - ''    (L8, T690, R754, B831)
+   |    |    |    |    |    |    |    |    |    |    |    | ['Pane14', 'TimePane2']
+   |    |    |    |    |    |    |    |    |    |    |    | child_window(auto_id="panel2", control_type="Pane")
+   |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    | Pane - '10:06:50 AM'    (L644, T738, R772, B768)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['Pane15', '10:06:50 AM', '10:06:50 AMPane', '10:06:50 AM0', '10:06:50 AM1', '10:06:50 AMPane0', '10:06:50 AMPane1']
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="10:06:50 AM", auto_id="toTimePicker", control_type="Pane")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | UpDown - ''    (L743, T741, R769, B765)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | ['ToUpDown', 'UpDown', 'UpDown0', 'UpDown1']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(auto_id="1000", control_type="Spinner")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | Button - 'More'    (L743, T741, R769, B753)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['Button2', 'More', 'MoreButton', 'More0', 'More1', 'MoreButton0', 'MoreButton1']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="More", auto_id="MoreButton", control_type="Button")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | Button - 'Less'    (L743, T753, R769, B765)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['LessButton', 'Less', 'Button3', 'LessButton0', 'LessButton1', 'Less0', 'Less1']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Less", auto_id="LessButton", control_type="Button")
+   |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    | Pane - '10:06:50 AM'    (L333, T738, R461, B768)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['Pane16', '10:06:50 AM2', '10:06:50 AMPane2']
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="10:06:50 AM", auto_id="fromTimePicker", control_type="Pane")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | UpDown - ''    (L432, T741, R458, B765)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | ['FromUpDown', 'UpDown2']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(auto_id="1000", control_type="Spinner")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | Button - 'More'    (L432, T741, R458, B753)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['Button4', 'More2', 'MoreButton2']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="More", auto_id="MoreButton", control_type="Button")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | Button - 'Less'    (L432, T753, R458, B765)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | ['LessButton2', 'Less2', 'Button5']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Less", auto_id="LessButton", control_type="Button")
+   |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    | Static - 'Time'    (L26, T698, R71, B718)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['TimeStatic', 'Time', 'Static2']        
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Time", auto_id="label4", control_type="Text")
+   |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    | Static - 'Logger'    (L26, T789, R86, B809)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['Logger', 'Static3', 'LoggerStatic']    
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Logger", auto_id="label3", control_type="Text")
+   |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    | ComboBox - 'To'    (L95, T785, R461, B817)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['ComboBox2', 'To', 'ToComboBox', 'To0', 'To1']
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="To", auto_id="filterComboBox", control_type="ComboBox")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | Static - 'To'    (L5, T5, R337, B28)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | ['To2', 'Static4', 'ToStatic', 'ToStatic0', 'ToStatic1']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="To", control_type="Text")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | Button - 'Open'    (L437, T786, R460, B815)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | ['Open2', 'OpenButton2', 'Button6'] 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Open", control_type="Button")
+   |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    | ComboBox - ''    (L143, T698, R509, B730)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['TimeComboBox', 'ComboBoxLast Day', 'ComboBox3', 'ComboBoxLast Week']
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(auto_id="fixedPeriodComboBox", control_type="ComboBox")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | Static - ''    (L5, T5, R337, B28)  
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | ['Static5']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | Button - 'Open'    (L485, T699, R508, B728)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | ['Open3', 'OpenButton3', 'Button7'] 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Open", control_type="Button")
+   |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    | RadioButton - ''    (L98, T702, R119, B722)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['TimeRadioButton', 'RadioButton', 'RadioButton0', 'RadioButton1']
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(auto_id="fixedPeriodRadioButton", control_type="RadioButton")
+   |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    | RadioButton - 'To'    (L98, T743, R119, B763)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['ToRadioButton', 'RadioButton2', 'To3'] 
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="To", auto_id="rangeRadioButton", control_type="RadioButton")
+   |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    | Pane - '4/27/2025'    (L192, T738, R317, B768)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['4/27/2025Pane', 'Pane17', '4/27/2025', '4/27/2025Pane0', '4/27/2025Pane1', '4/27/20250', '4/27/20251']
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="4/27/2025", auto_id="fromDatePicker", control_type="Pane")
+   |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    | Pane - '4/27/2025'    (L512, T738, R637, B768)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['4/27/2025Pane2', 'Pane18', '4/27/20252']
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="4/27/2025", auto_id="toDatePicker", control_type="Pane")
+   |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    | Static - 'To'    (L474, T744, R504, B764)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['To4', 'Static6', 'ToStatic2']
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="To", auto_id="label2", control_type="Text")
+   |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    | Static - 'From'    (L141, T743, R186, B763)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['Static7', 'FromStatic', 'From']        
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="From", auto_id="label1", control_type="Text")
+   |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    | ScrollBar - 'Vertical'    (L728, T690, R767, B806)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['Vertical', 'VerticalScrollBar', 'ScrollBar', 'ScrollBar0', 'ScrollBar1']
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Vertical", auto_id="NonClientVerticalScrollBar", control_type="ScrollBar")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | Button - 'Line up'    (L728, T690, R767, B716)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | ['Line up', 'Button8', 'Line upButton']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Line up", auto_id="UpButton", control_type="Button")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | Thumb - 'Position'    (L728, T716, R767, B739)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | ['Thumb', 'Position', 'PositionThumb', 'Thumb0', 'Thumb1', 'Position0', 'Position1', 'PositionThumb0', 'PositionThumb1']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Position", auto_id="ScrollbarThumb", control_type="Thumb")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | Button - 'Page down'    (L728, T739, R767, B780)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | ['Page down', 'Page downButton', 'Button9']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Page down", auto_id="DownPageButton", control_type="Button")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | Button - 'Line down'    (L728, T780, R767, B806)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | ['Line down', 'Button10', 'Line downButton']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Line down", auto_id="DownButton", control_type="Button")
+   |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    | ScrollBar - 'Horizontal'    (L8, T806, R728, B845)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['ScrollBar2', 'Horizontal', 'HorizontalScrollBar']
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Horizontal", auto_id="NonClientHorizontalScrollBar", control_type="ScrollBar")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | Button - 'Column left'    (L8, T806, R34, B845)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | ['Column leftButton', 'Column left', 'Button11']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Column left", auto_id="UpButton", control_type="Button")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | Thumb - 'Position'    (L34, T806, R438, B845)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | ['Thumb2', 'Position2', 'PositionThumb2']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Position", auto_id="ScrollbarThumb", control_type="Thumb")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | Button - 'Page right'    (L438, T806, R702, B845)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | ['Page right', 'Button12', 'Page rightButton']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Page right", auto_id="DownPageButton", control_type="Button")
+   |    |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | Button - 'Column right'    (L702, T806, R728, B845)
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | ['Column rightButton', 'Button13', 'Column right']
+   |    |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="Column right", auto_id="DownButton", control_type="Button")
+   |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    | Thumb - ''    (L728, T806, R754, B832)   
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['ToThumb', 'Thumb3']
+   |    |    |    |    |    |
+   |    |    |    |    |    | Pane - ''    (L767, T108, R1921, B839)
+   |    |    |    |    |    | ['Output FolderPane', 'Pane19', 'Output FolderPane0', 'Output FolderPane1'] 
+   |    |    |    |    |    | child_window(auto_id="2623730", control_type="Pane")
+   |    |    |    |    |    |    | 
+   |    |    |    |    |    |    | Pane - ''    (L768, T110, R1919, B838)
+   |    |    |    |    |    |    | ['Output FolderPane2', 'Pane20']
+   |    |    |    |    |    |    | child_window(auto_id="tableLayoutPanel2", control_type="Pane")
+   |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    | Pane - ''    (L773, T114, R1915, B833)
+   |    |    |    |    |    |    |    | ['Output FolderPane3', 'Pane21']
+   |    |    |    |    |    |    |    | child_window(auto_id="panel4", control_type="Pane")
+   |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    | Pane - ''    (L773, T114, R1915, B833)
+   |    |    |    |    |    |    |    |    | ['Output FolderPane4', 'Pane22']
+   |    |    |    |    |    |    |    |    | child_window(auto_id="jobView", control_type="Pane")
+   |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    | Button - ''    (L1865, T116, R1910, B154)
+   |    |    |    |    |    |    |    |    |    | ['Output FolderButton', 'Button14', 'Output FolderButton0', 'Output FolderButton1']
+   |    |    |    |    |    |    |    |    |    | child_window(auto_id="openExplorerButton", control_type="Button")
+   |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    | Button - ''    (L1814, T116, R1859, B154)
+   |    |    |    |    |    |    |    |    |    | ['Output FolderButton2', 'Button15']
+   |    |    |    |    |    |    |    |    |    | child_window(auto_id="browseButton", control_type="Button")
+   |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    | ComboBox - 'Output Folder'    (L893, T119, R1805, B151) 
+   |    |    |    |    |    |    |    |    |    | ['Output FolderComboBox', 'ComboBox4', 'Output Folder', 'Output Folder0', 'Output Folder1']
+   |    |    |    |    |    |    |    |    |    | child_window(title="Output Folder", auto_id="outputFolderComboBox", control_type="ComboBox")
+   |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    | Edit - 'Output Folder'    (L897, T123, R1775, B146)
+   |    |    |    |    |    |    |    |    |    |    | ['Edit2', 'Output FolderEdit']
+   |    |    |    |    |    |    |    |    |    |    | child_window(title="Output Folder", auto_id="1001", control_type="Edit")
+   |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    | Button - 'Open'    (L1781, T120, R1804, B149)      
+   |    |    |    |    |    |    |    |    |    |    | ['Open4', 'OpenButton4', 'Button16']
+   |    |    |    |    |    |    |    |    |    |    | child_window(title="Open", control_type="Button")  
+   |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    | Static - 'Output Folder'    (L777, T123, R884, B143)    
+   |    |    |    |    |    |    |    |    |    | ['Output FolderStatic', 'Static8', 'Output Folder2', 'Output FolderStatic0', 'Output FolderStatic1']
+   |    |    |    |    |    |    |    |    |    | child_window(title="Output Folder", auto_id="label1", control_type="Text")
+   |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    | Pane - ''    (L773, T159, R1915, B795)
+   |    |    |    |    |    |    |    |    |    | ['Output FolderPane5', 'Pane23']
+   |    |    |    |    |    |    |    |    |    | child_window(auto_id="panel1", control_type="Pane")     
+   |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    | Pane - ''    (L773, T159, R1915, B795)
+   |    |    |    |    |    |    |    |    |    |    | ['Output FolderPane6', 'Pane24']
+   |    |    |    |    |    |    |    |    |    |    | child_window(auto_id="tableLayoutPanel", control_type="Pane")
+   |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    | Pane - ''    (L779, T165, R1909, B216)        
+   |    |    |    |    |    |    |    |    |    |    |    | ['Output FolderPane7', 'Pane25']
+   |    |    |    |    |    |    |    |    |    |    |    | child_window(auto_id="PCAP", control_type="Pane")
+   |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    | Static - ''    (L1509, T174, R1553, B209)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['Output FolderStatic2', 'Static9']      
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(auto_id="warningLabel", control_type="Text")
+   |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    | Button - ''    (L785, T173, R823, B208)  
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['Output FolderButton3', 'Button17']     
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(auto_id="startButton", control_type="Button")
+   |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    | Static - ''    (L1766, T174, R1810, B209)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['Output FolderStatic3', 'Static10']     
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(auto_id="statusLabel", control_type="Text")
+   |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    | Button - ''    (L1821, T173, R1859, B212)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['Output FolderButton4', 'Button18']     
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(auto_id="editButton", control_type="Button")
+   |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    | CheckBox - 'PCAP'    (L831, T180, R912, B206)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['PCAP', 'CheckBox', 'PCAPCheckBox', 'CheckBox0', 'CheckBox1']
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="PCAP", auto_id="activateCheckBox", control_type="CheckBox")
+   |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    | Button - ''    (L1868, T173, R1906, B212)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['Button19']
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(auto_id="removeButton", control_type="Button")
+   |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    | Progress - ''    (L1562, T176, R1757, B208)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['Output FolderProgress', 'Progress', 'Output FolderProgress0', 'Output FolderProgress1', 'Progress0', 'Progress1']
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(auto_id="progressBar", control_type="ProgressBar")
+   |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    | Pane - ''    (L779, T227, R1909, B278)        
+   |    |    |    |    |    |    |    |    |    |    |    | ['Output FolderPane8', 'Pane26']
+   |    |    |    |    |    |    |    |    |    |    |    | child_window(auto_id="MTRE", control_type="Pane")
+   |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    | Static - ''    (L1509, T236, R1553, B271)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['Output FolderStatic4', 'Static11']     
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(auto_id="warningLabel", control_type="Text")
+   |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    | Button - ''    (L785, T234, R823, B269)  
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['Output FolderButton5', 'Button20']     
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(auto_id="startButton", control_type="Button")
+   |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    | Static - ''    (L1766, T236, R1810, B271)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['Output FolderStatic5', 'Static12']     
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(auto_id="statusLabel", control_type="Text")
+   |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    | Button - ''    (L1821, T234, R1859, B273)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['Button21']
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(auto_id="editButton", control_type="Button")
+   |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    | CheckBox - 'MTRE'    (L831, T242, R917, B268)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['MTRE', 'MTRECheckBox', 'CheckBox2']    
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(title="MTRE", auto_id="activateCheckBox", control_type="CheckBox")
+   |    |    |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    |    |    | Button - ''    (L1868, T234, R1906, B273)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['Button22']
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(auto_id="removeButton", control_type="Button")
+   |    |    |    |    |    |    |    |    |    |    |    |    |
+   |    |    |    |    |    |    |    |    |    |    |    |    | Progress - ''    (L1562, T237, R1757, B269)
+   |    |    |    |    |    |    |    |    |    |    |    |    | ['Output FolderProgress2', 'Progress2']  
+   |    |    |    |    |    |    |    |    |    |    |    |    | child_window(auto_id="progressBar", control_type="ProgressBar")
+   |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    | Toolbar - 'toolStrip3'    (L773, T795, R1915, B833)     
+   |    |    |    |    |    |    |    |    |    | ['toolStrip3Toolbar', 'Toolbar', 'toolStrip3', 'Toolbar0', 'Toolbar1']
+   |    |    |    |    |    |    |    |    |    | child_window(title="toolStrip3", auto_id="toolStrip3", control_type="ToolBar")
+   |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    | Button - 'Start Jobs'    (L773, T797, R889, B830)  
+   |    |    |    |    |    |    |    |    |    |    | ['Start Jobs', 'Button23', 'Start JobsButton']     
+   |    |    |    |    |    |    |    |    |    |    | child_window(title="Start Jobs", control_type="Button")
+   |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    | Button - 'Abort'    (L888, T797, R923, B830)       
+   |    |    |    |    |    |    |    |    |    |    | ['Abort', 'AbortButton', 'Button24']
+   |    |    |    |    |    |    |    |    |    |    | child_window(title="Abort", control_type="Button") 
+   |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    | Button - ''    (L1878, T797, R1913, B830)
+   |    |    |    |    |    |    |    |    |    |    | ['Button25']
+   |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    | Button - ''    (L1844, T797, R1879, B830)
+   |    |    |    |    |    |    |    |    |    |    | ['Button26']
+   |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    | Separator - ''    (L1835, T795, R1844, B833)       
+   |    |    |    |    |    |    |    |    |    |    | ['Separator', 'Separator0', 'Separator1']
+   |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    | Button - 'Remove All'    (L1800, T797, R1835, B830)
+   |    |    |    |    |    |    |    |    |    |    | ['Remove AllButton', 'Remove All', 'Button27']     
+   |    |    |    |    |    |    |    |    |    |    | child_window(title="Remove All", control_type="Button")
+   |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    | Button - 'Remove selected jobs'    (L1766, T797, R1801, B830)
+   |    |    |    |    |    |    |    |    |    |    | ['Remove selected jobs', 'Button28', 'Remove selected jobsButton']
+   |    |    |    |    |    |    |    |    |    |    | child_window(title="Remove selected jobs", control_type="Button")
+   |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    | Button - 'Add'    (L1731, T797, R1766, B830)       
+   |    |    |    |    |    |    |    |    |    |    | ['AddButton', 'Button29', 'Add']
+   |    |    |    |    |    |    |    |    |    |    | child_window(title="Add", control_type="Button")   
+   |    |    |    |
+   |    |    |    | Pane - ''    (L0, T845, R1920, B1129)
+   |    |    |    | ['Pane27', 'Conversion LogPane', 'Conversion LogPane0', 'Conversion LogPane1']        
+   |    |    |    | child_window(auto_id="1902674", control_type="Pane")
+   |    |    |    |    | 
+   |    |    |    |    | Pane - ''    (L2, T846, R1919, B1127)
+   |    |    |    |    | ['Pane28', 'Conversion LogPane2']
+   |    |    |    |    | child_window(auto_id="loggerView", control_type="Pane")
+   |    |    |    |    |    | 
+   |    |    |    |    |    | Pane - ''    (L2, T884, R1919, B1127)
+   |    |    |    |    |    | ['Pane29', 'Conversion LogPane3']
+   |    |    |    |    |    | child_window(auto_id="panel1", control_type="Pane")
+   |    |    |    |    |    |    | 
+   |    |    |    |    |    |    | Edit - ''    (L2, T884, R1919, B1127)
+   |    |    |    |    |    |    | ['Edit3', 'Conversion LogEdit']
+   |    |    |    |    |    |    | child_window(auto_id="richTextBox1", control_type="Edit")
+   |    |    |    |    |    |
+   |    |    |    |    |    | Toolbar - 'toolStrip1'    (L2, T846, R1919, B884)
+   |    |    |    |    |    | ['Toolbar2', 'toolStrip1', 'toolStrip1Toolbar', 'toolStrip10', 'toolStrip11', 'toolStrip1Toolbar0', 'toolStrip1Toolbar1']
+   |    |    |    |    |    | child_window(title="toolStrip1", auto_id="toolStrip1", control_type="ToolBar")
+   |    |    |    |    |    |    | 
+   |    |    |    |    |    |    | Static - 'Conversion Log'    (L2, T848, R137, B881)
+   |    |    |    |    |    |    | ['Conversion LogStatic', 'Static13', 'Conversion Log']
+   |    |    |    |    |    |    | child_window(title="Conversion Log", control_type="Text")
+   |    |    |    |    |    |    | 
+   |    |    |    |    |    |    | Separator - ''    (L137, T846, R146, B884)
+   |    |    |    |    |    |    | ['Conversion LogSeparator', 'Separator2']
+   |    |    |    |    |    |    | 
+   |    |    |    |    |    |    | Button - 'Clear'    (L146, T848, R181, B881)
+   |    |    |    |    |    |    | ['Clear', 'Button30', 'ClearButton']
+   |    |    |    |    |    |    | child_window(title="Clear", control_type="Button")
+   |    |    |    |    |    |    | 
+   |    |    |    |    |    |    | Button - 'Save'    (L180, T848, R215, B881)
+   |    |    |    |    |    |    | ['Save', 'SaveButton', 'Button31']
+   |    |    |    |    |    |    | child_window(title="Save", control_type="Button")
+   |    | 
+   |    | Pane - ''    (L0, T35, R1920, B109)
+   |    | ['Pane30']
+   |    | child_window(auto_id="1509092", control_type="Pane")
+   |    |    | 
+   |    |    | Menu - 'menuStrip1'    (L0, T35, R1920, B71)
+   |    |    | ['menuStrip1', 'Menu', 'menuStrip1Menu', 'Menu0', 'Menu1']
+   |    |    | child_window(title="menuStrip1", auto_id="menuStrip1", control_type="MenuBar")
+   |    |    |    | 
+   |    |    |    | MenuItem - 'File'    (L9, T38, R65, B68)
+   |    |    |    | ['File', 'MenuItem', 'FileMenuItem', 'MenuItem0', 'MenuItem1']
+   |    |    |    | child_window(title="File", control_type="MenuItem")
+   |    |    |    |    | 
+   |    |    |    |    | MenuItem - 'Save Log'    (L0, T0, R0, B0)
+   |    |    |    |    | ['Save Log', 'MenuItem2', 'Save LogMenuItem']
+   |    |    |    |    | child_window(title="Save Log", control_type="MenuItem")
+   |    |    |    |    | 
+   |    |    |    |    | Separator - ''    (L0, T0, R0, B0)
+   |    |    |    |    | ['Separator3']
+   |    |    |    |    | 
+   |    |    |    |    | MenuItem - 'Load Settings ...'    (L0, T0, R0, B0)
+   |    |    |    |    | ['Load Settings ...', 'MenuItem3', 'Load Settings ...MenuItem']
+   |    |    |    |    | child_window(title="Load Settings ...", control_type="MenuItem")
+   |    |    |    |    | 
+   |    |    |    |    | MenuItem - 'Save Settings ...'    (L0, T0, R0, B0)
+   |    |    |    |    | ['MenuItem4', 'Save Settings ...', 'Save Settings ...MenuItem']
+   |    |    |    |    | child_window(title="Save Settings ...", control_type="MenuItem")
+   |    |    |    |    | 
+   |    |    |    |    | Separator - ''    (L0, T0, R0, B0)
+   |    |    |    |    | ['Separator3']
+   |    |    |    |    | 
+   |    |    |    |    | MenuItem - 'Load BusSpec ...'    (L0, T0, R0, B0)
+   |    |    |    |    | ['MenuItem5', 'Load BusSpec ...', 'Load BusSpec ...MenuItem']
+   |    |    |    |    | child_window(title="Load BusSpec ...", control_type="MenuItem")
+   |    |    |    |    | 
+   |    |    |    |    | Separator - ''    (L0, T0, R0, B0)
+   |    |    |    |    | ['Separator3']
+   |    |    |    |    | 
+   |    |    |    |    | MenuItem - 'Exit'    (L0, T0, R0, B0)
+   |    |    |    |    | ['ExitMenuItem', 'MenuItem6', 'Exit']
+   |    |    |    |    | child_window(title="Exit", control_type="MenuItem")
+   |    |    |    | 
+   |    |    |    | MenuItem - 'Options'    (L65, T38, R157, B68)
+   |    |    |    | ['Options', 'MenuItem7', 'OptionsMenuItem']
+   |    |    |    | child_window(title="Options", control_type="MenuItem")
+   |    |    |    |    | 
+   |    |    |    |    | MenuItem - 'Verbose Level'    (L0, T0, R0, B0)
+   |    |    |    |    | ['MenuItem8', 'Verbose LevelMenuItem', 'Verbose Level']
+   |    |    |    |    | child_window(title="Verbose Level", control_type="MenuItem")
+   |    |    |    |    |    | 
+   |    |    |    |    |    | MenuItem - '0'    (L0, T0, R0, B0)
+   |    |    |    |    |    | ['MenuItem9', '0MenuItem', '0']
+   |    |    |    |    |    | child_window(title="0", control_type="MenuItem")
+   |    |    |    |    |    | 
+   |    |    |    |    |    | MenuItem - '1'    (L0, T0, R0, B0)
+   |    |    |    |    |    | ['MenuItem10', '1MenuItem', '1']
+   |    |    |    |    |    | child_window(title="1", control_type="MenuItem")
+   |    |    |    |    |    | 
+   |    |    |    |    |    | MenuItem - '2'    (L0, T0, R0, B0)
+   |    |    |    |    |    | ['MenuItem11', '2', '2MenuItem']
+   |    |    |    |    |    | child_window(title="2", control_type="MenuItem")
+   |    |    |    |    |    | 
+   |    |    |    |    |    | MenuItem - '3 (Default)'    (L0, T0, R0, B0)
+   |    |    |    |    |    | ['MenuItem12', '3 (Default)', '3 (Default)MenuItem']
+   |    |    |    |    |    | child_window(title="3 (Default)", control_type="MenuItem")
+   |    |    |    |    |    | 
+   |    |    |    |    |    | MenuItem - '4'    (L0, T0, R0, B0)
+   |    |    |    |    |    | ['MenuItem13', '4MenuItem', '4']
+   |    |    |    |    |    | child_window(title="4", control_type="MenuItem")
+   |    |    |    |    | 
+   |    |    |    |    | MenuItem - 'Set DAT File Reader'    (L0, T0, R0, B0)
+   |    |    |    |    | ['MenuItem14', 'Set DAT File ReaderMenuItem', 'Set DAT File Reader']
+   |    |    |    |    | child_window(title="Set DAT File Reader", control_type="MenuItem")
+   |    |    |    |    | 
+   |    |    |    |    | MenuItem - 'Set Bus Spec Language'    (L0, T0, R0, B0)
+   |    |    |    |    | ['Set Bus Spec LanguageMenuItem', 'MenuItem15', 'Set Bus Spec Language']
+   |    |    |    |    | child_window(title="Set Bus Spec Language", control_type="MenuItem")
+   |    |    |    |    |    | 
+   |    |    |    |    |    | MenuItem - 'nameEn'    (L0, T0, R0, B0)
+   |    |    |    |    |    | ['nameEnMenuItem', 'MenuItem16', 'nameEn']
+   |    |    |    |    |    | child_window(title="nameEn", control_type="MenuItem")
+   |    |    |    |    |    | 
+   |    |    |    |    |    | MenuItem - 'nameDe'    (L0, T0, R0, B0)
+   |    |    |    |    |    | ['MenuItem17', 'nameDeMenuItem', 'nameDe']
+   |    |    |    |    |    | child_window(title="nameDe", control_type="MenuItem")
+   |    |    |    |    | 
+   |    |    |    |    | MenuItem - 'Time zone'    (L0, T0, R0, B0)
+   |    |    |    |    | ['Time zone', 'MenuItem18', 'Time zoneMenuItem']
+   |    |    |    |    | child_window(title="Time zone", control_type="MenuItem")
+   |    |    |    |    |    | 
+   |    |    |    |    |    | MenuItem - 'UTC'    (L0, T0, R0, B0)
+   |    |    |    |    |    | ['MenuItem19', 'UTC', 'UTCMenuItem']
+   |    |    |    |    |    | child_window(title="UTC", control_type="MenuItem")
+   |    |    |    |    |    | 
+   |    |    |    |    |    | MenuItem - 'Local time'    (L0, T0, R0, B0)
+   |    |    |    |    |    | ['MenuItem20', 'Local time', 'Local timeMenuItem']
+   |    |    |    |    |    | child_window(title="Local time", control_type="MenuItem")
+   |    |    |    |    |    | 
+   |    |    |    |    |    | MenuItem - 'Session local time'    (L0, T0, R0, B0)
+   |    |    |    |    |    | ['MenuItem21', 'Session local time', 'Session local timeMenuItem']
+   |    |    |    |    |    | child_window(title="Session local time", control_type="MenuItem")
+   |    |    |    | 
+   |    |    |    | MenuItem - 'Help'    (L156, T38, R222, B68)
+   |    |    |    | ['MenuItem22', 'Help', 'HelpMenuItem', 'Help0', 'Help1', 'HelpMenuItem0', 'HelpMenuItem1']
+   |    |    |    | child_window(title="Help", control_type="MenuItem")
+   |    |    |    |    | 
+   |    |    |    |    | MenuItem - 'Help'    (L0, T0, R0, B0)
+   |    |    |    |    | ['MenuItem23', 'Help2', 'HelpMenuItem2']
+   |    |    |    |    | child_window(title="Help", control_type="MenuItem")
+   |    |    |    |    | 
+   |    |    |    |    | MenuItem - 'About CCA-Converter...'    (L0, T0, R0, B0)
+   |    |    |    |    | ['About CCA-Converter...', 'MenuItem24', 'About CCA-Converter...MenuItem']       
+   |    |    |    |    | child_window(title="About CCA-Converter...", control_type="MenuItem")
+   |    |    |
+   |    |    | Toolbar - 'toolStrip1'    (L5, T71, R149, B109)
+   |    |    | ['Toolbar3', 'toolStrip12', 'toolStrip1Toolbar2']
+   |    |    | child_window(title="toolStrip1", auto_id="toolStrip1", control_type="ToolBar")
+   |    |    |    | 
+   |    |    |    | Thumb - 'Grip'    (L8, T71, R16, B109)
+   |    |    |    | ['Grip', 'Thumb4', 'GripThumb']
+   |    |    |    | child_window(title="Grip", control_type="Thumb")
+   |    |    |    | 
+   |    |    |    | Button - 'Browse'    (L18, T72, R66, B105)
+   |    |    |    | ['Browse', 'Button32', 'BrowseButton']
+   |    |    |    | child_window(title="Browse", control_type="Button")
+   |    |    |    | 
+   |    |    |    | Button - 'Finder'    (L66, T72, R101, B105)
+   |    |    |    | ['Finder', 'FinderButton', 'Button33']
+   |    |    |    | child_window(title="Finder", control_type="Button")
+   |    |    |    | 
+   |    |    |    | Button - 'Refresh'    (L101, T72, R136, B105)
+   |    |    |    | ['RefreshButton', 'Button34', 'Refresh']
+   |    |    |    | child_window(title="Refresh", control_type="Button")
+   |    |    |    | 
+   |    |    |    | Separator - ''    (L135, T71, R144, B109)
+   |    |    |    | ['Separator6']
+   | 
+   | TitleBar - ''    (L24, T-8, R1920, B35)
+   | ['TitleBar']
+   |    |
+   |    | Menu - 'System'    (L0, T0, R33, B33)
+   |    | ['Menu2', 'System', 'SystemMenu', 'System0', 'System1']
+   |    | child_window(title="System", auto_id="MenuBar", control_type="MenuBar")
+   |    |    | 
+   |    |    | MenuItem - 'System'    (L0, T0, R33, B33)
+   |    |    | ['MenuItem25', 'System2', 'SystemMenuItem']
+   |    |    | child_window(title="System", control_type="MenuItem")
+   |    | 
+   |    | Button - 'Minimize'    (L1707, T0, R1778, B35)
+   |    | ['MinimizeButton', 'Minimize', 'Button35']
+   |    | child_window(title="Minimize", control_type="Button")
+   |    |
+   |    | Button - 'Restore'    (L1778, T0, R1849, B35)
+   |    | ['Restore', 'Button36', 'RestoreButton']
+   |    | child_window(title="Restore", control_type="Button")
+   |    | 
+   |    | Button - 'Close'    (L1848, T0, R1920, B35)
+   |    | ['CloseButton', 'Close', 'Button37']
+   |    | child_window(title="Close", control_type="Button")
