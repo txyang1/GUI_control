@@ -1,8 +1,60 @@
-Traceback (most recent call last):
-  File "c:/Users/qxz5y3m/Desktop/Transfer_Tool_for_trace/auto_gui1.1.py", line 102, in <module>
-    automate_converter(converter_exe, input_folder, output_folder)
-  File "c:/Users/qxz5y3m/Desktop/Transfer_Tool_for_trace/auto_gui1.1.py", line 72, in automate_converter  
-    dlg.child_window(title="Sessions", control_type="TabItem").select()
-  File "C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace\tran\lib\site-packages\pywinauto\controls\uiawrapper.py", line 605, in select
-    self.iface_selection_item.Select()
-_ctypes.COMError: (-2147220992, None, (None, None, None, 0, None))
+pip3 install -i https://common.artifactory.cc.bmwgroup.net/artifactory/api/pypi/software-factory-pypi-public/simple --proxy http://QXZ5Y3M:shijierenmindatuanjiewansui@proxycn.muc:8080 psutil
+Looking in indexes: https://common.artifactory.cc.bmwgroup.net/artifactory/api/pypi/software-factory-pypi-public/simple
+Collecting psutil
+  Using cached https://common.artifactory.cc.bmwgroup.net/artifactory/api/pypi/software-factory-pypi-public/packages/packages/2a/80/336820c1ad9286a4ded7e845b2eccfcb27851ab8ac6abece774a6ff4d3de/psutil-7.0.0.tar.gz
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Installing backend dependencies ... done
+    Preparing wheel metadata ... done
+Building wheels for collected packages: psutil
+  Building wheel for psutil (PEP 517) ... error
+  ERROR: Command errored out with exit status 1:
+   command: 'c:\program files\python37\python.exe' 'c:\program files\python37\lib\site-packages\pip\_vendor\pep517\_in_process.py' build_wheel 'C:\Users\qxz5y3m\AppData\Local\Temp\tmp56p041cd'
+       cwd: C:\Users\qxz5y3m\AppData\Local\Temp\pip-install-0prwbgt9\psutil
+  Complete output (38 lines):
+  running bdist_wheel
+  running build
+  running build_py
+  creating build
+  creating build\lib.win-amd64-cpython-37
+  creating build\lib.win-amd64-cpython-37\psutil
+  copying psutil\_common.py -> build\lib.win-amd64-cpython-37\psutil
+  copying psutil\_psaix.py -> build\lib.win-amd64-cpython-37\psutil
+  copying psutil\_psbsd.py -> build\lib.win-amd64-cpython-37\psutil
+  copying psutil\_pslinux.py -> build\lib.win-amd64-cpython-37\psutil
+  copying psutil\_psosx.py -> build\lib.win-amd64-cpython-37\psutil
+  copying psutil\_psposix.py -> build\lib.win-amd64-cpython-37\psutil
+  copying psutil\_pssunos.py -> build\lib.win-amd64-cpython-37\psutil
+  copying psutil\_pswindows.py -> build\lib.win-amd64-cpython-37\psutil
+  copying psutil\__init__.py -> build\lib.win-amd64-cpython-37\psutil
+  creating build\lib.win-amd64-cpython-37\psutil\tests
+  copying psutil\tests\test_aix.py -> build\lib.win-amd64-cpython-37\psutil\tests
+  copying psutil\tests\test_bsd.py -> build\lib.win-amd64-cpython-37\psutil\tests
+  copying psutil\tests\test_connections.py -> build\lib.win-amd64-cpython-37\psutil\tests
+  copying psutil\tests\test_contracts.py -> build\lib.win-amd64-cpython-37\psutil\tests
+  copying psutil\tests\test_linux.py -> build\lib.win-amd64-cpython-37\psutil\tests
+  copying psutil\tests\test_memleaks.py -> build\lib.win-amd64-cpython-37\psutil\tests
+  copying psutil\tests\test_misc.py -> build\lib.win-amd64-cpython-37\psutil\tests
+  copying psutil\tests\test_osx.py -> build\lib.win-amd64-cpython-37\psutil\tests
+  copying psutil\tests\test_posix.py -> build\lib.win-amd64-cpython-37\psutil\tests
+  copying psutil\tests\test_process.py -> build\lib.win-amd64-cpython-37\psutil\tests
+  copying psutil\tests\test_process_all.py -> build\lib.win-amd64-cpython-37\psutil\tests
+  copying psutil\tests\test_scripts.py -> build\lib.win-amd64-cpython-37\psutil\tests
+  copying psutil\tests\test_sunos.py -> build\lib.win-amd64-cpython-37\psutil\tests
+  copying psutil\tests\test_system.py -> build\lib.win-amd64-cpython-37\psutil\tests
+  copying psutil\tests\test_testutils.py -> build\lib.win-amd64-cpython-37\psutil\tests
+  copying psutil\tests\test_unicode.py -> build\lib.win-amd64-cpython-37\psutil\tests
+  copying psutil\tests\test_windows.py -> build\lib.win-amd64-cpython-37\psutil\tests
+  copying psutil\tests\__init__.py -> build\lib.win-amd64-cpython-37\psutil\tests
+  copying psutil\tests\__main__.py -> build\lib.win-amd64-cpython-37\psutil\tests
+  running build_ext
+  building 'psutil._psutil_windows' extension
+  error: Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft C++ Build Tools": https://visualstudio.microsoft.com/visual-cpp-build-tools/
+  ----------------------------------------
+  ERROR: Failed building wheel for psutil
+  Running setup.py clean for psutil
+Failed to build psutil
+ERROR: Could not build wheels for psutil which use PEP 517 and cannot be installed directly
+WARNING: You are using pip version 19.2.3, however version 24.0 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+PS C:\Users\qxz5y3m\Desktop\Transfer_Tool_for_trace> 
