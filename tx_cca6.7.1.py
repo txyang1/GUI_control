@@ -91,47 +91,49 @@ def wait_for_completion(pane, timeout=600, retry_interval=1):
         print(f"  ✓ {pane_auto_id} 已完成 {name}")'''
 def run_for_rows(dlg, pane_auto_id: str):
     tab = dlg.child_window(auto_id="tabControl1", control_type="Tab")
-    sessions_table_id = "SessionView"
-    pane = dlg.child_window(auto_id=pane_auto_id, control_type="Pane")
+    sessions_tab = tab.child_window(title="Sessions", control_type="TabItem")
+    target_tab   = tab.child_window(title=pane_auto_id, control_type="TabItem")
 
-    # 先取所有行名
-    tab.child_window(title="Sessions", control_type="TabItem").select()
-    time.sleep(0.5)
-    table = dlg.child_window(auto_id=sessions_table_id, control_type="Table").wrapper_object()
-    items = table.descendants(control_type="DataItem")
+    # 先拿到所有行名
+    sessions_tab.select()
+    time.sleep(0.3)
+    table = dlg.child_window(auto_id="SessionView", control_type="Table").wrapper_object()
+    all_items = table.descendants(control_type="DataItem")
     name_pat = re.compile(r"^\s*Row \d+$")
-    row_names = [itm.element_info.name.strip() for itm in items 
-                 if itm.element_info.name and name_pat.match(itm.element_info.name)]
+    row_names = [it.element_info.name.strip() for it in all_items if it.element_info.name and name_pat.match(it.element_info.name)]
 
-    for idx, name in enumerate(row_names, start=1):
+    for idx, name in enumerate(row_names, 1):
         print(f"[{idx}/{len(row_names)}] 运行 {pane_auto_id} → {name}")
 
-        # 1) 选中
-        tab.child_window(title="Sessions", control_type="TabItem").select()
+        # 1) 切到 Sessions，选中行
+        sessions_tab.select()
         time.sleep(0.2)
-        table = dlg.child_window(auto_id=sessions_table_id, control_type="Table").wrapper_object()
-        items = table.descendants(control_type="DataItem")
-        cell = next(it for it in items if it.element_info.name.strip() == name)
+        table = dlg.child_window(auto_id="SessionView", control_type="Table").wrapper_object()
+        cell = next(it for it in table.descendants(control_type="DataItem")
+                    if it.element_info.name.strip() == name)
         cell.click_input()
         time.sleep(0.2)
 
-        # 2) 启动并等待完成
-        try:
-            click_when_ready(pane, timeout=60, retry_interval=0.5)
-            wait_for_completion(pane, timeout=600, retry_interval=1)
-        except Exception as e:
-            print(f"⚠️ 等待 {name} 完成时出错：{e}. 继续下一个。")
+        # 2) 切到 PCAP 面板
+        target_tab.select()
+        time.sleep(0.3)
 
-        # 3) 取消选中（重新获取最新的 cell）
-        tab.child_window(title="Sessions", control_type="TabItem").select()
-        time.sleep(0.2)
-        table = dlg.child_window(auto_id=sessions_table_id, control_type="Table").wrapper_object()
-        items = table.descendants(control_type="DataItem")
-        try:
-            fresh_cell = next(it for it in items if it.element_info.name.strip() == name)
-            fresh_cell.click_input()
-        except StopIteration:
-            print(f"⚠️ 找不到要取消选中的行 {name}，跳过。")
+        # 3) 每次都重新抓按钮
+        pane = dlg.child_window(auto_id=pane_auto_id, control_type="Pane")
+        btn_spec = pane.child_window(auto_id="startButton", control_type="Button")
+        btn_spec.wait("visible enabled ready", timeout=30)
+        btn = btn_spec.wrapper_object()
+
+        # 4) 点击并动态等待
+        btn.click_input()
+        # 等待“禁用→启用”周期，表明一次执行完成
+        timings.wait_until(  timeout=300, retry_interval=0.5,
+                             func=lambda: not btn.is_enabled() )
+        timings.wait_until(  timeout=300, retry_interval=0.5,
+                             func=lambda:     btn.is_enabled() )
+
+        # 5) 取消选中
+        cell.click_input()
         time.sleep(0.2)
 
         print(f"  ✓ {pane_auto_id} 已完成 {name}")
