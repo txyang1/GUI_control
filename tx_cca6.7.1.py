@@ -53,7 +53,7 @@ def wait_for_completion(pane, timeout=600, retry_interval=1):
     )
 
 
-def run_for_rows(dlg, pane_auto_id: str):
+'''def run_for_rows(dlg, pane_auto_id: str):
     # 切换到 Sessions 标签页，收集所有行名称
     tab = dlg.child_window(auto_id="tabControl1", control_type="Tab")
     tab.child_window(title="Sessions", control_type="TabItem").select()
@@ -88,7 +88,54 @@ def run_for_rows(dlg, pane_auto_id: str):
         cell.click_input()
         time.sleep(0.2)
 
+        print(f"  ✓ {pane_auto_id} 已完成 {name}")'''
+def run_for_rows(dlg, pane_auto_id: str):
+    tab = dlg.child_window(auto_id="tabControl1", control_type="Tab")
+    sessions_table_id = "SessionView"
+    pane = dlg.child_window(auto_id=pane_auto_id, control_type="Pane")
+
+    # 先取所有行名
+    tab.child_window(title="Sessions", control_type="TabItem").select()
+    time.sleep(0.5)
+    table = dlg.child_window(auto_id=sessions_table_id, control_type="Table").wrapper_object()
+    items = table.descendants(control_type="DataItem")
+    name_pat = re.compile(r"^\s*Row \d+$")
+    row_names = [itm.element_info.name.strip() for itm in items 
+                 if itm.element_info.name and name_pat.match(itm.element_info.name)]
+
+    for idx, name in enumerate(row_names, start=1):
+        print(f"[{idx}/{len(row_names)}] 运行 {pane_auto_id} → {name}")
+
+        # 1) 选中
+        tab.child_window(title="Sessions", control_type="TabItem").select()
+        time.sleep(0.2)
+        table = dlg.child_window(auto_id=sessions_table_id, control_type="Table").wrapper_object()
+        items = table.descendants(control_type="DataItem")
+        cell = next(it for it in items if it.element_info.name.strip() == name)
+        cell.click_input()
+        time.sleep(0.2)
+
+        # 2) 启动并等待完成
+        try:
+            click_when_ready(pane, timeout=60, retry_interval=0.5)
+            wait_for_completion(pane, timeout=600, retry_interval=1)
+        except Exception as e:
+            print(f"⚠️ 等待 {name} 完成时出错：{e}. 继续下一个。")
+
+        # 3) 取消选中（重新获取最新的 cell）
+        tab.child_window(title="Sessions", control_type="TabItem").select()
+        time.sleep(0.2)
+        table = dlg.child_window(auto_id=sessions_table_id, control_type="Table").wrapper_object()
+        items = table.descendants(control_type="DataItem")
+        try:
+            fresh_cell = next(it for it in items if it.element_info.name.strip() == name)
+            fresh_cell.click_input()
+        except StopIteration:
+            print(f"⚠️ 找不到要取消选中的行 {name}，跳过。")
+        time.sleep(0.2)
+
         print(f"  ✓ {pane_auto_id} 已完成 {name}")
+
 
 
 def main():
