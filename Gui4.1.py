@@ -156,3 +156,77 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+def run_for_rows(dlg, pane_auto_id: str, batch_size: int = 1):
+    """
+    在 Files 页签中，将所有行按 batch_size 分批。
+    对每批里的每一行，都做：
+      - 选中
+      - 点击 Run
+      - 等待完成
+      - 取消选中
+    打印出“批次开始”和“批次完成”信息。
+    """
+    # 切到 Files 标签页
+    dlg.child_window(auto_id="tabControl1", control_type="Tab") \
+       .child_window(title="Files", control_type="TabItem").select()
+    time.sleep(0.5)
+
+    # 收集所有行名
+    table = dlg.child_window(auto_id="FileView", control_type="Table").wrapper_object()
+    items = table.descendants(control_type="DataItem")
+    name_pat = re.compile(r"^\s*Row \d+$")
+    row_names = [it.element_info.name.strip()
+                 for it in items
+                 if it.element_info.name and name_pat.match(it.element_info.name)]
+
+    # Run 按钮引用
+    run_btn = dlg.child_window(auto_id=pane_auto_id, control_type="Pane") \
+                 .child_window(auto_id="startButton", control_type="Button")
+
+    total = len(row_names)
+    # 分批处理
+    for batch_start in range(0, total, batch_size):
+        batch = row_names[batch_start:batch_start + batch_size]
+        print(f"\n===== 开始批次 {batch_start//batch_size + 1}（{batch_start+1}-{min(batch_start+batch_size, total)}/{total}）: {batch} =====")
+
+        for name in batch:
+            # 切回 Files tab 并定位表格
+            dlg.child_window(auto_id="tabControl1", control_type="Tab") \
+               .child_window(title="Files", control_type="TabItem").select()
+            time.sleep(0.2)
+            table = dlg.child_window(auto_id="FileView", control_type="Table").wrapper_object()
+
+            # 找到该行
+            itm = next(it for it in table.descendants(control_type="DataItem")
+                       if it.element_info.name.strip() == name)
+
+            # 滚动到可见
+            try:
+                itm.scroll_into_view()
+            except Exception:
+                table.set_focus()
+                while itm.element_info.element.CurrentIsOffscreen:
+                    send_keys("{PGDN}")
+            time.sleep(0.1)
+
+            # 点击选中
+            itm.click_input()
+            time.sleep(0.1)
+
+            # 点击 Run 并等待完成
+            run_btn.click_input()
+            timings.wait_until(
+                timeout=600,
+                retry_interval=1,
+                func=lambda: run_btn.is_enabled()
+            )
+            time.sleep(0.1)
+
+            # 取消选中
+            itm.click_input()
+            time.sleep(0.1)
+            print(f"    ✓ 已完成 {name}")
+
+        print(f"===== 完成批次 {batch_start//batch_size + 1} =====\n")
