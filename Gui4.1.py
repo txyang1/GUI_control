@@ -23,8 +23,7 @@ def set_folder(dlg, combo_auto_id: str, path: str):
     parent = combo.parent()
     for title in ("Open", "Browse", "openExplorerButton", "browseButton"):
         try:
-            btn = parent.child_window(title=title, control_type="Button")
-            btn.click_input()
+            parent.child_window(title=title, control_type="Button").click_input()
             time.sleep(0.5)
             break
         except Exception:
@@ -35,8 +34,8 @@ def run_for_rows(dlg, pane_auto_id: str, batch_size: int = 1):
     在 Files 页签中，按 batch_size 批量选中行并点击 ▶ 运行，支持 batch_size=1（逐条）或更大。
     """
     # 切换到 Files 标签页
-    tab = dlg.child_window(auto_id="tabControl1", control_type="Tab")
-    tab.child_window(title="Files", control_type="TabItem").select()
+    dlg.child_window(auto_id="tabControl1", control_type="Tab") \
+       .child_window(title="Files", control_type="TabItem").select()
     time.sleep(0.5)
 
     # 收集所有行名
@@ -49,51 +48,47 @@ def run_for_rows(dlg, pane_auto_id: str, batch_size: int = 1):
         if itm.element_info.name and name_pat.match(itm.element_info.name)
     ]
 
-    # 函数控件
-    func_pane      = dlg.child_window(auto_id=pane_auto_id, control_type="Pane")
-    func_start_btn = func_pane.child_window(auto_id="startButton", control_type="Button")
+    # 启动按钮
+    func_start_btn = dlg.child_window(auto_id=pane_auto_id, control_type="Pane") \
+                        .child_window(auto_id="startButton", control_type="Button")
 
     total = len(row_names)
-    # 按 batch_size 分批次
     for start in range(0, total, batch_size):
         batch = row_names[start:start + batch_size]
         print(f"[Files {start+1}-{min(start+batch_size, total)}/{total}] 运行 {pane_auto_id} → {batch}")
 
-        # 再次切换到 Files tab，重新定位 table
-        tab.child_window(title="Files", control_type="TabItem").select()
+        # 切回 Files tab，重新定位 table
+        dlg.child_window(auto_id="tabControl1", control_type="Tab") \
+           .child_window(title="Files", control_type="TabItem").select()
         time.sleep(0.2)
         files_table = dlg.child_window(auto_id="FileView", control_type="Table").wrapper_object()
 
-        # 按 batch 中的行依次选中（支持多选）
+        # 批量选中
         for i, name in enumerate(batch):
-            # 找到对应的 DataItem
             itm = next(
                 it for it in files_table.descendants(control_type="DataItem")
                 if it.element_info.name.strip() == name
             )
-            cell = itm.wrapper_object()
-
-            # 确保可见
+            # 保证可见
             try:
-                cell.scroll_into_view()
+                itm.scroll_into_view()
                 time.sleep(0.1)
             except Exception:
                 files_table.set_focus()
-                while cell.element_info.element.CurrentIsOffscreen:
+                while itm.element_info.element.CurrentIsOffscreen:
                     send_keys("{PGDN}")
                     time.sleep(0.1)
             time.sleep(0.1)
 
-            # 第一个直接点击，后续按住 Ctrl 多选
+            # 第一个直接点击，后续 Ctrl 多选
             if i == 0:
-                cell.click_input()
+                itm.click_input()
             else:
-                cell.click_input(ctrl=True)
+                itm.click_input(ctrl=True)
             time.sleep(0.1)
 
-        # 点击启动按钮
+        # 点击 ▶ 启动
         func_start_btn.click_input()
-        # 等待运行完成（按钮重新可用）
         timings.wait_until(
             timeout=600,
             retry_interval=1,
@@ -102,13 +97,13 @@ def run_for_rows(dlg, pane_auto_id: str, batch_size: int = 1):
         time.sleep(0.2)
         print(f"  ✓ 完成 batch {start//batch_size + 1}")
 
-        # 取消选中（按住 Ctrl 点击每一项）
+        # 取消选中
         for name in batch:
             itm = next(
                 it for it in files_table.descendants(control_type="DataItem")
                 if it.element_info.name.strip() == name
             )
-            itm.wrapper_object().click_input(ctrl=True)
+            itm.click_input(ctrl=True)
             time.sleep(0.05)
 
 def run_mode(dlg, mode: str, batch_size: int):
