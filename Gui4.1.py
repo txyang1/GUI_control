@@ -29,19 +29,52 @@ def set_folder(dlg, combo_auto_id: str, path: str):
         except Exception:
             continue
 
+def ensure_visible(item, table):
+    """
+    把单个 DataItem 滚动到可视区：
+    1. 优先尝试 item.scroll_into_view()
+    2. 否则获取 table 和 item 的屏幕坐标，
+       如果 item 在 table 上方用 PageUp， 在下方用 PageDown，
+       循环直到完全可见为止。
+    """
+    try:
+        item.scroll_into_view()
+        return
+    except Exception:
+        pass
+
+    # 拿到可视表格和目标行的屏幕坐标
+    tbl_rect = table.rectangle()
+    itm_rect = item.rectangle()
+
+    # 如果已经完全在可视区内，直接返回
+    if itm_rect.top >= tbl_rect.top and itm_rect.bottom <= tbl_rect.bottom:
+        return
+
+    # 循环翻页，直到可见
+    while not (itm_rect.top >= tbl_rect.top and itm_rect.bottom <= tbl_rect.bottom):
+        if itm_rect.top < tbl_rect.top:
+            send_keys("{PGUP}")
+        else:
+            send_keys("{PGDN}")
+        time.sleep(0.1)
+        itm_rect = item.rectangle()
+        tbl_rect = table.rectangle()
+
 def run_for_rows(dlg, pane_auto_id: str, batch_size: int = 1):
     """
-    每 batch_size 条为一组：
-      1. 依次选中（保存 wrapper）
-      2. 点击 Run（一次）
-      3. 依次取消选中（对每个 wrapper 先 scroll，再 click）
+    按 batch_size 分批：
+      1. 依次为本批每一行调用 ensure_visible + click_input（选中并保存 wrapper）
+      2. 批次内所有行选中后，仅点击一次 Run
+      3. 等待完成
+      4. 依次为本批每一行调用 ensure_visible + click_input（取消选中）
     """
-    # 切到 Files
+    # 切到 Files 标签页
     dlg.child_window(auto_id="tabControl1", control_type="Tab") \
        .child_window(title="Files", control_type="TabItem").select()
     time.sleep(0.5)
 
-    # 收集所有 Row 名称
+    # 收集所有行名称
     table = dlg.child_window(auto_id="FileView", control_type="Table").wrapper_object()
     all_items = table.descendants(control_type="DataItem")
     name_pat = re.compile(r"^\s*Row \d+$")
@@ -49,57 +82,56 @@ def run_for_rows(dlg, pane_auto_id: str, batch_size: int = 1):
                  for it in all_items
                  if it.element_info.name and name_pat.match(it.element_info.name)]
 
+    # Run 按钮
     run_btn = dlg.child_window(auto_id=pane_auto_id, control_type="Pane") \
                  .child_window(auto_id="startButton", control_type="Button")
 
     total = len(row_names)
     for batch_start in range(0, total, batch_size):
         batch = row_names[batch_start:batch_start + batch_size]
-        print(f"\n===== 批次 {batch_start//batch_size + 1} ("
-              f"{batch_start+1}-{min(batch_start+batch_size, total)}) → {batch}")
+        print(f"\n===== 批次 {batch_start//batch_size + 1} "
+              f"({batch_start+1}-{min(batch_start+batch_size, total)}/{total}): {batch} =====")
 
         # 1. 依次选中并保存 wrapper
-        selected_wrappers = []
+        selected = []
         for name in batch:
-            # 切回 Files 并定位
+            # 确保在 Files tab 并刷新 table 引用
             dlg.child_window(auto_id="tabControl1", control_type="Tab") \
                .child_window(title="Files", control_type="TabItem").select()
             time.sleep(0.2)
             table = dlg.child_window(auto_id="FileView", control_type="Table").wrapper_object()
 
+            # 找到该行
             itm = next(it for it in table.descendants(control_type="DataItem")
                        if it.element_info.name.strip() == name)
-            # 滚动到可见
-            try:
-                itm.scroll_into_view(); time.sleep(0.1)
-            except Exception:
-                table.set_focus()
-                while itm.element_info.element.CurrentIsOffscreen:
-                    send_keys("{PGDN}")
-                    time.sleep(0.1)
-            itm.click_input(); time.sleep(0.1)
 
-            selected_wrappers.append(itm)
+            # 确保可见并点击选中
+            ensure_visible(itm, table)
+            time.sleep(0.1)
+            itm.click_input()
+            time.sleep(0.1)
+
+            selected.append(itm)
             print(f"    已选中 {name}")
 
-        # 2. 点击 Run
-        print("    ▶ 单次 Run")
+        # 2. 批次内选完后一次性 Run
+        print("    ▶ 点击 Run")
         run_btn.click_input()
-        timings.wait_until(timeout=600, retry_interval=1, func=lambda: run_btn.is_enabled())
+        timings.wait_until(
+            timeout=600,
+            retry_interval=1,
+            func=lambda: run_btn.is_enabled()
+        )
         time.sleep(0.2)
-        print("  ✓ 本批完成，开始取消选中")
+        print(f"  ✓ 批次 {batch_start//batch_size + 1} 完成")
 
-        # 3. 依次取消选中：对每个 wrapper 先 scroll，再 click
-        for itm in selected_wrappers:
-            try:
-                itm.scroll_into_view(); time.sleep(0.1)
-            except Exception:
-                table.set_focus()
-                while itm.element_info.element.CurrentIsOffscreen:
-                    send_keys("{PGDN}")
-                    time.sleep(0.1)
-            itm.click_input(); time.sleep(0.05)
-
+        # 3. 依次取消选中
+        for itm in selected:
+            # 保证它还在可视区
+            ensure_visible(itm, table)
+            time.sleep(0.05)
+            itm.click_input()
+            time.sleep(0.05)
         print(f"===== 结束批次 {batch_start//batch_size + 1} =====")
 
 
