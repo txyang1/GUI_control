@@ -63,58 +63,62 @@ def ensure_visible(item, table):
 
 def run_for_rows(dlg, pane_auto_id: str, batch_size: int = 1):
     """
-    按 batch_size 分批：
-      1. 依次为本批每一行调用 ensure_visible + click_input（选中并保存 wrapper）
-      2. 批次内所有行选中后，仅点击一次 Run
+    在 Files 页签中，按 batch_size 分批：
+      1. 依次点击批次内每一行以选中它
+      2. 批次内所有行点击完毕后，仅点击一次 Run
       3. 等待完成
-      4. 依次为本批每一行调用 ensure_visible + click_input（取消选中）
+      4. 依次取消选中批次内每一行
     """
-    # 切到 Files 标签页
+    # 切换到 Files 标签页
     dlg.child_window(auto_id="tabControl1", control_type="Tab") \
        .child_window(title="Files", control_type="TabItem").select()
     time.sleep(0.5)
 
-    # 收集所有行名称
+    # 收集所有行名
     table = dlg.child_window(auto_id="FileView", control_type="Table").wrapper_object()
-    all_items = table.descendants(control_type="DataItem")
+    items = table.descendants(control_type="DataItem")
     name_pat = re.compile(r"^\s*Row \d+$")
     row_names = [it.element_info.name.strip()
-                 for it in all_items
+                 for it in items
                  if it.element_info.name and name_pat.match(it.element_info.name)]
 
-    # Run 按钮
+    # Run 按钮引用
     run_btn = dlg.child_window(auto_id=pane_auto_id, control_type="Pane") \
                  .child_window(auto_id="startButton", control_type="Button")
 
     total = len(row_names)
     for batch_start in range(0, total, batch_size):
         batch = row_names[batch_start:batch_start + batch_size]
-        print(f"\n===== 批次 {batch_start//batch_size + 1} "
+        print(f"\n===== 开始批次 {batch_start//batch_size + 1} "
               f"({batch_start+1}-{min(batch_start+batch_size, total)}/{total}): {batch} =====")
 
-        # 1. 依次选中并保存 wrapper
-        selected = []
+        # 1. 依次点击选中本批次每一行
         for name in batch:
-            # 确保在 Files tab 并刷新 table 引用
+            # 切回 Files tab 并重新定位表格
             dlg.child_window(auto_id="tabControl1", control_type="Tab") \
                .child_window(title="Files", control_type="TabItem").select()
             time.sleep(0.2)
             table = dlg.child_window(auto_id="FileView", control_type="Table").wrapper_object()
 
-            # 找到该行
+            # 找到对应行
             itm = next(it for it in table.descendants(control_type="DataItem")
                        if it.element_info.name.strip() == name)
 
-            # 确保可见并点击选中
-            ensure_visible(itm, table)
+            # 滚动到可见
+            try:
+                itm.scroll_into_view()
+            except Exception:
+                table.set_focus()
+                while itm.element_info.element.CurrentIsOffscreen:
+                    send_keys("{PGDN}")
             time.sleep(0.1)
+
+            # 点击选中
             itm.click_input()
             time.sleep(0.1)
-
-            selected.append(itm)
             print(f"    已选中 {name}")
 
-        # 2. 批次内选完后一次性 Run
+        # 2. 批次内所有行选中后，仅此一次点击 Run
         print("    ▶ 点击 Run")
         run_btn.click_input()
         timings.wait_until(
@@ -125,15 +129,18 @@ def run_for_rows(dlg, pane_auto_id: str, batch_size: int = 1):
         time.sleep(0.2)
         print(f"  ✓ 批次 {batch_start//batch_size + 1} 完成")
 
-        # 3. 依次取消选中
-        for itm in selected:
-            # 保证它还在可视区
-            ensure_visible(itm, table)
-            time.sleep(0.05)
+        # 3. 依次取消选中本批次每一行
+        for name in batch:
+            
+
+            # 找到对应行
+            itm = next(it for it in table.descendants(control_type="DataItem")
+                       if it.element_info.name.strip() == name)
+           
+
             itm.click_input()
             time.sleep(0.05)
-        print(f"===== 结束批次 {batch_start//batch_size + 1} =====")
-
+        print(f"===== 结束批次 {batch_start//batch_size + 1} =====\n")
 
 
 def run_mode(dlg, mode: str, batch_size: int):
@@ -191,6 +198,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
