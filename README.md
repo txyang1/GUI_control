@@ -59,13 +59,13 @@ python run_converter.py [--mode MODE] [--batch-size N]
 * **每 5 个文件为一批运行 MTRE**：
 
   ```bash
-  python GUI4.1.py --mode MTRE --batch-size 5
+  python Gui4.1.py --mode MTRE --batch-size 5
   ```
 
 * **同时运行 PCAP 和 MTRE，每批 3 个文件**：
 
   ```bash
-  python GUI4.1.py --mode ALL --batch-size 3
+  python Gui4.1.py --mode ALL --batch-size 3
   ```
 
 ## 注意事项
